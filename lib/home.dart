@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_challenges/challenges/instagram_redesign/pages/home.dart';
+import 'challenges/instagram_redesign/pages/home.dart';
+import 'challenges/sliding_login.dart/sliding_login.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -20,7 +21,18 @@ class HomePage extends StatelessWidget {
                   ),
                 );
               },
-              child: const Text('instagram redesign'),
+              child: const Text('Instagram redesign'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const SlidingLoginPage(),
+                  ),
+                );
+              },
+              child: const Text('Slidign login'),
             ),
           ],
         ),
